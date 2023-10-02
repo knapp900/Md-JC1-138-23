@@ -1,3 +1,10 @@
 **
 !src/
-*.gitignore
+
+
+**.gitignore
+
+
+**!.drawio
+
+
