@@ -30,7 +30,7 @@ public class ForEachOperation implements IArraysOperation {
 
         int i = array.length - 1;
 
-        for (int a : array) {
+        for (int element : array) {
 
             System.out.print(array[i] + " ");
 
