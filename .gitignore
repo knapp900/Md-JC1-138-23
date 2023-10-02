@@ -2,7 +2,7 @@
 !src/
 
 
-**.gitignore
+.gitignore
 
 
 **!.drawio
