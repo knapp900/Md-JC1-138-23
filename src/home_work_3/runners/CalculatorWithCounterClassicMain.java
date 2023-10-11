@@ -28,7 +28,7 @@ public class CalculatorWithCounterClassicMain {
 
 
         System.out.printf
-                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. Колличество вызавов методов класса : %d"
+                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. РљРѕР»Р»РёС‡РµСЃС‚РІРѕ РІС‹Р·Р°РІРѕРІ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° : %d"
                         , result
                         , withCounterClassic.getCountOperation()); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
     }

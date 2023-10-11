@@ -12,8 +12,7 @@ public class CalculatorWithOperatorMain {
                 .add((whitOperator
                         .add(whitOperator
                                 .multiply(15, 7),whitOperator
-                                .power(
-                                        (whitOperator
+                                .power((whitOperator
                                                 .divide(28, 5)), 2))) , 4.1);
 
         System.out.printf

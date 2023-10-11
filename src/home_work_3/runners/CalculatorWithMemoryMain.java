@@ -4,11 +4,11 @@ import home_work_3.calcs.additional.CalculatorWithMemory;
 import home_work_3.calcs.simple.CalculatorWithOperator;
 
 /*
-12.8 Создать класс CalculatorWithMemoryMain в котором будет точка входа (main метод). В main методе требуется
-	создать экземпляр калькулятора и используя методы из данного экземпляра посчитать выражения из задания 1.
-	Вывести в консоль результат. В мэйне запрещается использование переменных для хранения значений участвующих в
-	просчёте, а также результатов работы методов калькулятора, можно использовать только литералы и метод получения
-	из памяти записанного значения.
+12.8 РЎРѕР·РґР°С‚СЊ РєР»Р°СЃСЃ CalculatorWithMemoryMain РІ РєРѕС‚РѕСЂРѕРј Р±СѓРґРµС‚ С‚РѕС‡РєР° РІС…РѕРґР° (main РјРµС‚РѕРґ). Р’ main РјРµС‚РѕРґРµ С‚СЂРµР±СѓРµС‚СЃСЏ
+	СЃРѕР·РґР°С‚СЊ СЌРєР·РµРјРїР»СЏСЂ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР° Рё РёСЃРїРѕР»СЊР·СѓСЏ РјРµС‚РѕРґС‹ РёР· РґР°РЅРЅРѕРіРѕ СЌРєР·РµРјРїР»СЏСЂР° РїРѕСЃС‡РёС‚Р°С‚СЊ РІС‹СЂР°Р¶РµРЅРёСЏ РёР· Р·Р°РґР°РЅРёСЏ 1.
+	Р’С‹РІРµСЃС‚Рё РІ РєРѕРЅСЃРѕР»СЊ СЂРµР·СѓР»СЊС‚Р°С‚. Р’ РјСЌР№РЅРµ Р·Р°РїСЂРµС‰Р°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С… РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ СѓС‡Р°СЃС‚РІСѓСЋС‰РёС… РІ
+	РїСЂРѕСЃС‡С‘С‚Рµ, Р° С‚Р°РєР¶Рµ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ СЂР°Р±РѕС‚С‹ РјРµС‚РѕРґРѕРІ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР°, РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РѕР»СЊРєРѕ Р»РёС‚РµСЂР°Р»С‹ Рё РјРµС‚РѕРґ РїРѕР»СѓС‡РµРЅРёСЏ
+	РёР· РїР°РјСЏС‚Рё Р·Р°РїРёСЃР°РЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ.
  */
 public class CalculatorWithMemoryMain {
 
@@ -16,12 +16,20 @@ public class CalculatorWithMemoryMain {
 
         CalculatorWithMemory calculator = new CalculatorWithMemory(new CalculatorWithOperator());
 
+//        calculator.divide(28,5);
+//        calculator.save();
+//        calculator.power(calculator.load(),2);
+//        calculator.save();
+//        calculator.add(calculator.multiply(15,7),calculator.load());
+//        calculator.save();
+//        calculator.add(calculator.load(),4.1);
+//        calculator.save();
+
         calculator
                 .add((calculator
                         .add(calculator
                                 .multiply(15, 7),calculator
-                                .power(
-                                        (calculator
+                                .power((calculator
                                                 .divide(28, 5)), 2))) , 4.1);
         calculator.save();
 

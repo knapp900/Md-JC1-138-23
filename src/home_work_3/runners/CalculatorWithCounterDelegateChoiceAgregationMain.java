@@ -20,12 +20,11 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                 .add((calculator
                         .add(calculator
                                 .multiply(15, 7), calculator
-                                .power(
-                                        (calculator
+                                .power((calculator
                                                 .divide(28, 5)), 2))), 4.1);
 
         System.out.printf
-                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. Колличество вызавов методов класса : %d"
+                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. РљРѕР»Р»РёС‡РµСЃС‚РІРѕ РІС‹Р·Р°РІРѕРІ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° : %d"
                         , result
                         , calculator.getCountOperation()); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
 
@@ -41,7 +40,7 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                                                 .divide(28, 5)), 2))), 4.1);
         System.out.println();
         System.out.printf
-                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. Колличество вызавов методов класса : %d"
+                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. РљРѕР»Р»РёС‡РµСЃС‚РІРѕ РІС‹Р·Р°РІРѕРІ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° : %d"
                         , result
                         , calculator2.getCountOperation()); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
 
@@ -58,7 +57,7 @@ public class CalculatorWithCounterDelegateChoiceAgregationMain {
                                                 .divide(28, 5)), 2))), 4.1);
         System.out.println();
         System.out.printf
-                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. Колличество вызавов методов класса : %d"
+                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. РљРѕР»Р»РёС‡РµСЃС‚РІРѕ РІС‹Р·Р°РІРѕРІ РјРµС‚РѕРґРѕРІ РєР»Р°СЃСЃР° : %d"
                         , result
                         , calculator3.getCountOperation()); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
     }

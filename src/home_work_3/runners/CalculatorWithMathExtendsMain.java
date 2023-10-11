@@ -12,8 +12,7 @@ public class CalculatorWithMathExtendsMain {
                 .add((withMathExtends
                         .add(withMathExtends
                                 .multiply(15, 7),withMathExtends
-                                .power(
-                                        (withMathExtends
+                                .power((withMathExtends
                                                 .divide(28, 5)), 2))) , 4.1);
 
         System.out.printf
