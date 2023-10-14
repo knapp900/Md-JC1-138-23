@@ -20,7 +20,11 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
 	из задания 1. Вывести в консоль результаты посчитанных выражений и результат метода getCountOperation().
  */
 public class CalculatorWithCounterAutoAgregation {
+
+    //Переменная калькулятора
     private CalculatorWithMathCopy calculatorWithMathCopy;
+
+    // Переменная счетчика срабатываний методов класса
     private long counter;
 
     public CalculatorWithCounterAutoAgregation(CalculatorWithMathCopy calculatorWithMathCopy) {

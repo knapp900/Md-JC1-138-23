@@ -21,7 +21,9 @@ import home_work_3.calcs.simple.CalculatorWithMathCopy;
  */
 public class CalculatorWithCounterAutoComposite {
 
+    //Переменная калькулятора
     private CalculatorWithMathCopy calculatorWithMathCopy;
+    // Переменная счетчика срабатываний методов класса
     private long counter;
 
     public CalculatorWithCounterAutoComposite() {

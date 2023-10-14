@@ -4,6 +4,7 @@ import home_work_3.calcs.additional.CalculatorWithCounterAutoSuper;
 
 public class CalculatorWithCounterAutoSuperMain {
     public static void main(String[] args) {
+
         CalculatorWithCounterAutoSuper withCounterAutoSuper = new CalculatorWithCounterAutoSuper();
 
         double result = withCounterAutoSuper

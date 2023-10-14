@@ -17,18 +17,26 @@ import home_work_3.calcs.simple.CalculatorWithMathExtends;
  */
 public class CalculatorWithCounterClassic extends CalculatorWithMathExtends {
 
+    // Счетчик срабатываний методов класса
     private long counter;
 
     public CalculatorWithCounterClassic() {
-      super();
-      counter = 0;
+        super();
+        counter = 0;
     }
 
-
+    /**
+     * Увеличивает счетчик на 1
+     */
     public void incrementCountOperation() {
         this.counter++;
     }
 
+    /**
+     * Возвращает значение счетчика
+     *
+     * @return - значение
+     */
     public long getCountOperation() {
         return counter;
     }

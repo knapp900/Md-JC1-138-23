@@ -23,12 +23,10 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
         return Math.pow(numOne, numTwo);
     }
 
-
     @Override
     public double abs(double num) {
         return Math.abs(num);
     }
-
 
     public double sqrt(double num) {
         return Math.sqrt(num);

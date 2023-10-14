@@ -29,10 +29,11 @@ import home_work_3.calcs.api.ICalculator;
  */
 public class CalculatorWithMemory implements ICalculator {
 
-    // Переназначается результатом выполнения всех методов
+    // Переназначается с результатом выполнения всех методов
     private double lastOfMethodResult;
     // Сохраненное значение
     private double savedValue;
+    // Переменная интерфейса калькулятор
     private ICalculator calculator;
 
     public CalculatorWithMemory(ICalculator calculator) {

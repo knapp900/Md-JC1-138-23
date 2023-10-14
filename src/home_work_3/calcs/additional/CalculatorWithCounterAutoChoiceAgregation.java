@@ -33,10 +33,14 @@ import home_work_3.calcs.simple.CalculatorWithOperator;
  */
 public class CalculatorWithCounterAutoChoiceAgregation {
 
+    /*
+    Переменные калькуляторов которые могут быть использованы в классе
+     */
     private CalculatorWithOperator calculatorWithOperator;
     private CalculatorWithMathCopy calculatorWithMathCopy;
     private CalculatorWithMathExtends calculatorWithMathExtends;
 
+    // Переменная счетчика срабатываний методов класса
     private long counter;
 
     public CalculatorWithCounterAutoChoiceAgregation(CalculatorWithOperator calculatorWithOperator) {

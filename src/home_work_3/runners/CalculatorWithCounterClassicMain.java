@@ -8,27 +8,15 @@ public class CalculatorWithCounterClassicMain {
 
         CalculatorWithCounterClassic withCounterClassic = new CalculatorWithCounterClassic();
 
-        double result;
-        double temp;
-
-        result = withCounterClassic.divide(28, 5);
-        withCounterClassic.incrementCountOperation();
-
-        result = withCounterClassic.power(result,2);
-        withCounterClassic.incrementCountOperation();
-
-        temp = withCounterClassic.multiply(15, 7);
-        withCounterClassic.incrementCountOperation();
-
-        result = withCounterClassic.add(result,temp);
-        withCounterClassic.incrementCountOperation();
-
-        result = withCounterClassic.add(result,4.1);
-        withCounterClassic.incrementCountOperation();
-
+        double result = withCounterClassic
+                .add((withCounterClassic
+                        .add(withCounterClassic
+                                .multiply(15, 7), withCounterClassic
+                                .power((withCounterClassic
+                                        .divide(28, 5)), 2))), 4.1);
 
         System.out.printf
-                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f. Колличество вызавов методов класса : %d"
+                ("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f"
                         , result
                         , withCounterClassic.getCountOperation()); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
     }

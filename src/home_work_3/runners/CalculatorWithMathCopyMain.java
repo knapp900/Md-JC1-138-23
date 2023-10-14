@@ -7,7 +7,12 @@ public class CalculatorWithMathCopyMain {
 
         CalculatorWithMathCopy withMathCopy = new CalculatorWithMathCopy();
 
-        double result = withMathCopy.add( (withMathCopy.multiply(15,7) + withMathCopy.power((withMathCopy.divide(28,5)),2)), 4.1);
+        double result = withMathCopy
+                .add((withMathCopy
+                        .add(withMathCopy
+                                .multiply(15, 7),withMathCopy
+                                .power((withMathCopy
+                                        .divide(28, 5)), 2))) , 4.1);
 
         System.out.printf("4.1 + 15 * 7 + (28 / 5) ^ 2 = %.4f",result); // 4.1 + 15 * 7 + (28 / 5) ^ 2 = 140.4600
     }

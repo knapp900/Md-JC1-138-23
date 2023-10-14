@@ -19,8 +19,8 @@ import home_work_3.calcs.simple.CalculatorWithMathExtends;
  */
 public class CalculatorWithCounterAutoSuper extends CalculatorWithMathExtends {
 
+    // Переменная счетчика срабатываний методов класса
     private long counter;
-
 
     public CalculatorWithCounterAutoSuper() {
         super();

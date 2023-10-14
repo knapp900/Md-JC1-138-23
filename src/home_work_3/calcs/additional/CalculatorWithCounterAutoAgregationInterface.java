@@ -19,7 +19,10 @@ import home_work_3.calcs.api.ICalculator;
 
  */
 public class CalculatorWithCounterAutoAgregationInterface {
+
+    // Переменная интерфейса калькулятор
     private ICalculator calculator;
+    // Переменная счетчика срабатываний методов класса
     private long counter;
 
     public CalculatorWithCounterAutoAgregationInterface(ICalculator calculator) {

@@ -31,18 +31,9 @@ public class CalculatorWithMathCopy implements ICalculator {
         return numOne / numTwo;
     }
 
-    public double power(double numOne, double numTwo) {
+    public double power(double numOne, double numTwo) { return Math.pow(numOne, numTwo); }
 
-        return Math.pow(numOne, numTwo);
-    }
+    public double abs(double num) { return Math.abs(num); }
 
-    public double abs(double num) {
-
-        return Math.abs(num);
-    }
-
-    public double sqrt(double num) {
-
-        return Math.sqrt(num);
-    }
+    public double sqrt(double num) { return Math.sqrt(num); }
 }
