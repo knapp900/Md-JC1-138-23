@@ -29,6 +29,11 @@ public class CalculatorWithMathExtends extends CalculatorWithOperator implements
     }
 
     public double sqrt(double num) {
+
+        if (num <= 0) {
+            return 0;
+        }
+
         return Math.sqrt(num);
     }
 }

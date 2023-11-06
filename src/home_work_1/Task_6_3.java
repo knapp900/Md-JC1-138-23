@@ -15,10 +15,10 @@ public class Task_6_3 {
         scanner.close();
     }
 
-    private static String greetings(String message) {
+    public static String greetings(String message) {
 
         return switch (message) {
-            case "Вася" -> "Привет!" + '\n' + "Я тебя так долго ждал";
+            case "Вася" -> "Привет!\nЯ тебя так долго ждал";
             case "Анастасия" -> "Я тебя так долго ждал";
             default -> "Добрый день, а вы кто?";
         };

@@ -94,7 +94,7 @@ public class ArraysUtils {
             for (int i = 0; i < arr.length; i++) {
 
                 seed = System.nanoTime();
-                randomValue = (int) ((seed + System.nanoTime()) % maxValueExclusion);
+                randomValue = (int) ((seed + System.nanoTime()) % (maxValueExclusion + 1));
                 arr[i] = randomValue;
 
             }
@@ -118,7 +118,7 @@ class Utils {
             return false;
         }
 
-        return args.matches("^[0-9]+$") && args.charAt(0) != '0';
+        return args.matches("^-?[0-9]+$") && args.charAt(0) != '0';
     }
 
     /**
@@ -134,7 +134,7 @@ class Utils {
             return false;
         }
 
-        return args.matches("^[0-9\\s]+$");
+        return args.matches("^\\s?-?[0-9\\s]+$");
     }
 
     /**

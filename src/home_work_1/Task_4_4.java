@@ -9,13 +9,13 @@ public class Task_4_4 {
         System.out.println(convertor(10000, 'b'));
     }
 
-    public static String convertor(int number, char type) {
+    public static String convertor(double number, char type) {
 
         if (type == 'b') {
             return number + " байт ровняется " + byteToKilobyte(number) + " килобайт";
         }
 
-        return number + " килобайт ровняется " + byteToKilobyte(number) + " байт";
+        return number + " килобайт ровняется " + kilobyteToByte(number) + " байт";
     }
 
     public static double byteToKilobyte(double number) {

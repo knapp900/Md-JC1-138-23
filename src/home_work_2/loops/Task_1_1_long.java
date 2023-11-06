@@ -46,7 +46,7 @@ public class Task_1_1_long {
      * @param args массив аргументов
      * @return если !null возвращает первый аргумент если null то вернет null
      */
-    private String getFirstArgument(String[] args) {
+    public String getFirstArgument(String[] args) {
 
         if (args != null) {
 
@@ -64,7 +64,7 @@ public class Task_1_1_long {
      * @param stringOfNumber String содержащий число
      * @return int результат преобразования строки
      */
-    private int stringToInt(String stringOfNumber) {
+    public int stringToInt(String stringOfNumber) {
 
         return Integer.parseInt(stringOfNumber);
     }
@@ -75,7 +75,7 @@ public class Task_1_1_long {
      * @param number = факториал какого числа нужно найти
      * @return = возвращает 0 если long переполнен и result если вычисление прошло успешно
      */
-    private long factorial(int number) {
+    public long factorial(int number) {
 
         long result = 1;
 
@@ -97,7 +97,7 @@ public class Task_1_1_long {
      * @param number = проверяемое число
      * @return = true если long не переполнен и false если переполнен
      */
-    private boolean isNotOverflow(long number) {
+    public boolean isNotOverflow(long number) {
 
         return number < Long.MAX_VALUE && number > 0;
     }
@@ -108,14 +108,14 @@ public class Task_1_1_long {
      * @param args = строка для проверки на число
      * @return true если строка содержит число и не начинается с нуля
      */
-    private boolean isNumber(String args) {
+    public boolean isNumber(String args) {
 
         if (args == null) {
 
             return false;
         }
 
-        return args.matches("^[0-9]+$") && args.charAt(0) != '0';
+        return args.matches("^-?[0-9]+$") && args.charAt(0) != '0';
     }
 
     /**
@@ -123,7 +123,7 @@ public class Task_1_1_long {
      *
      * @param message = строка которая должна быть напечатана в консоль
      */
-    private void printMessage(String message) {
+    public void printMessage(String message) {
 
         System.out.println(message);
     }
@@ -135,7 +135,7 @@ public class Task_1_1_long {
      * @param iterator принимает int количество символов для формирования строки до знака равенства
      * @return возвращает String в заданном формате
      */
-    private String buildAnswer(long result, int iterator) {
+    public String buildAnswer(long result, int iterator) {
 
         StringBuilder builder = new StringBuilder();
 

@@ -12,7 +12,7 @@ package home_work_1;
 
 public class Task_4_1 {
 
-    public boolean isEvenNumber(int numberForCheck) {
-        return (numberForCheck % 2 == 0) ? true : false;
+    public boolean isNotEvenNumber(int numberForCheck) {
+        return (numberForCheck % 2 != 0) ? true : false;
     }
 }

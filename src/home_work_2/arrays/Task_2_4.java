@@ -18,14 +18,14 @@ public class Task_2_4 {
         compressArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, 2, 5);
         sumOfArrayDigit(new int[]{55, 5});
         twoMinElementsOfArray(new int[]{1, 0, 2, 12, 33, 34});//bag
-        elementsLessArithmeticMean(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        elementsLessArithmeticMean(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11});
         maxElementOfArrayForEvenIndex(new int[]{1, 2, 3, 4, 56, 6, 7, 8, 9, 10});
         sumOfEvenConstituentElementsOfArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
 
     }
 
     //     2.4.1. Сумма четных положительных элементов массива
-    public static void sumOfEvenConstituentElementsOfArray(int[] array) {
+    public static int sumOfEvenConstituentElementsOfArray(int[] array) {
 
         int sum = 0;
 
@@ -37,11 +37,11 @@ public class Task_2_4 {
             }
         }
 
-        System.out.println(sum);
+        return sum;
     }
 
     //    2.4.2. Максимальный из элементов массива с четными индексами
-    public static void maxElementOfArrayForEvenIndex(int[] array) {
+    public static int maxElementOfArrayForEvenIndex(int[] array) {
 
         int maxValue = 0;
 
@@ -53,14 +53,15 @@ public class Task_2_4 {
             }
         }
 
-        System.out.println(maxValue);
+        return maxValue;
     }
 
     //    2.4.3. Элементы массива, которые меньше среднего арифметического
-    public static void elementsLessArithmeticMean(int[] array) {
+    public static int[] elementsLessArithmeticMean(int[] array) {
 
         int sumAllElements = 0;
         int arithmeticMean;
+        int[] result;
 
         for (int i = 0; i < array.length; i++) {
 
@@ -69,25 +70,28 @@ public class Task_2_4 {
 
         arithmeticMean = sumAllElements / array.length;
 
+        result = new int[arithmeticMean];
+
         for (int i = 0; i < array.length; i++) {
 
-            if (array[i] < arithmeticMean) {
+            if (array[i] <= arithmeticMean) {
 
-                System.out.print(array[i] + " ");
+                System.out.print(result[i] = array[i]);
             }
         }
-
+        return result;
     }
 
     //    2.4.4. Найти два наименьших (минимальных) элемента массива
-    public static void twoMinElementsOfArray(int[] array) {
+    public static int[] twoMinElementsOfArray(int[] array) {
 
+        int [] arrayResult = new int[2];
         int min = array[0];
-        int previousMin = 0;
+        int previousMin = min;
 
         for (int i = 1; i < array.length; i++) {
 
-            if (array[i] < min || min == 0) {
+            if (array[i] < min ) {
 
                 previousMin = min;
                 min = array[i];
@@ -95,11 +99,14 @@ public class Task_2_4 {
             }
         }
 
-        System.out.println("Min " + min + " Previous Min " + previousMin);
+        arrayResult[0] = previousMin;
+        arrayResult[1] = min;
+
+        return arrayResult;
     }
 
     //	  2.4.5. Сжать массив, удалив элементы, принадлежащие интервалу
-    public static void compressArray(int[] array, int minBoundOfRange, int maxBoundOfRange) {
+    public static int[] compressArray(int[] array, int minBoundOfRange, int maxBoundOfRange) {
 
         int increment;
         int[] result = new int[array.length];
@@ -125,13 +132,12 @@ public class Task_2_4 {
                 increment++;
             }
         }
-
-        System.out.println(Arrays.toString(result));
+        return result;
     }
 
 
     //	  2.4.6. Сумма цифр массива
-    public static void sumOfArrayDigit(int[] array) {
+    public static int sumOfArrayDigit(int[] array) {
 
         int sum = 0;
 
@@ -146,6 +152,6 @@ public class Task_2_4 {
             }
         }
 
-        System.out.println(sum);
+        return sum;
     }
 }

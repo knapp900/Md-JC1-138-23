@@ -38,7 +38,7 @@ public class Task_1_1_BInt {
      * @param args массив аргументов
      * @return если !null возвращает первый аргумент если null то вернет null
      */
-    private String getFirstArgument(String[] args) {
+    public String getFirstArgument(String[] args) {
 
         if (args != null) {
 
@@ -56,7 +56,7 @@ public class Task_1_1_BInt {
      * @param stringOfNumber String содержащий число
      * @return int результат преобразования строки
      */
-    private int stringToInt(String stringOfNumber) {
+    public int stringToInt(String stringOfNumber) {
 
         return Integer.parseInt(stringOfNumber);
     }
@@ -67,7 +67,7 @@ public class Task_1_1_BInt {
      * @param number = факториал какого числа нужно найти
      * @return = BigInteger result
      */
-    private BigInteger factorial(int number) {
+    public BigInteger factorial(int number) {
 
         BigInteger result = BigInteger.ONE;
 
@@ -86,14 +86,14 @@ public class Task_1_1_BInt {
      * @param args = строка для проверки на число
      * @return true если строка содержит число и не начинается с нуля и не является null
      */
-    private boolean isNumber(String args) {
+    public boolean isNumber(String args) {
 
         if (args == null) {
 
             return false;
         }
 
-        return args.matches("^[0-9]+$") && args.charAt(0) != '0';
+        return args.matches("^-?[0-9]+$") && args.charAt(0) != '0';
     }
 
     /**
@@ -103,7 +103,7 @@ public class Task_1_1_BInt {
      * @param iterator принимает int количество символов для формирования строки до знака равенства
      * @return возвращает String в заданном формате
      */
-    private String buildAnswer(BigInteger result, int iterator) {
+    public String buildAnswer(BigInteger result, int iterator) {
 
         StringBuilder builder = new StringBuilder();
 

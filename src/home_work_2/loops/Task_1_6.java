@@ -17,8 +17,11 @@ public class Task_1_6 {
     }
 
     private void printTwoDimArray(String[][] arr) {
+
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
+
                 System.out.print(arr[i][j]);
             }
             System.out.println();
@@ -26,7 +29,7 @@ public class Task_1_6 {
     }
 
 
-    private String[][] buildMultiplyMatrix(String[] multiplyArray) {
+    public String[][] buildMultiplyMatrix(String[] multiplyArray) {
 
         String[][] multiplyTable = new String[21][4];
         int counter;
@@ -61,7 +64,7 @@ public class Task_1_6 {
         return multiplyTable;
     }
 
-    private String[] getFormatStringOfMultiplyTwoNumbers(int minValue, int maxValue) { // minV = 2 maxV = 10
+    public String[] getFormatStringOfMultiplyTwoNumbers(int minValue, int maxValue) { // minV = 2 maxV = 10
 
         String[] arr = new String[(maxValue - minValue) * maxValue];
         int counter = 0;

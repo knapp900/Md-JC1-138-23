@@ -9,15 +9,16 @@ public class Task_6_2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(greetings(scanner));
+        String message = scanner.next();
+        System.out.println(greetings(message));
         scanner.close();
     }
 
-    private static String greetings(Scanner scanner) {
-        String message = scanner.next();
+    public static String greetings(String message) {
+
 
         if (message != null && message.equals("Вася")) {
-            return "Привет!" + '\n' + "Я тебя так долго ждал";
+            return "Привет!\nЯ тебя так долго ждал";
         } else if (message != null && message.equals("Анастасия")) {
             return "Я тебя так долго ждал";
         }

@@ -31,7 +31,7 @@ public class Task_1_5 {
      *
      * @param number строка с числом для поиска
      */
-    public static void findMaxDigit(String number) {
+    public static int findMaxDigit(String number) {
         int result = 0;
 
         for (int i = 0; i < number.length(); i++) {
@@ -44,7 +44,7 @@ public class Task_1_5 {
                 result = number.charAt(i) - '0';
             }
         }
-        System.out.println("Max digit = " + result);
+        return result;
     }
 
     //1.5.2. Вероятность четных случайных чисел
@@ -55,7 +55,7 @@ public class Task_1_5 {
      * @param random экземпляр класса Random()
      * @param bound  верхняя граница случайного числа
      */
-    public static void probabilityOfEvenRandomNumbers(Random random, int bound) {
+    public static double probabilityOfEvenRandomNumbers(Random random, int bound) {
 
         double percentOfRandom = 0;
         double evenNumbers = 0;
@@ -70,7 +70,7 @@ public class Task_1_5 {
         }
         percentOfRandom = (evenNumbers / bound) * 100;
 
-        System.out.println("Вероятность четных случайных чисел " + percentOfRandom + " %");
+        return percentOfRandom;
 
     }
 
@@ -80,9 +80,11 @@ public class Task_1_5 {
      * Считает четные и нечетные цыфры числа и выводит на экран
      *
      * @param number строка с числом для подсчета
+     * @return - массив int в ячейке 0 - четные ячейка 1 - нечетные
      */
-    public static void countEvenAndUnevenDigitsOfNumber(String number) {
+    public static int[] countEvenAndUnevenDigitsOfNumber(String number) {
 
+        int[] result;
         int evenDigits = 0;
         int unevenDigits = 0;
 
@@ -97,7 +99,13 @@ public class Task_1_5 {
             }
         }
 
-        System.out.println("Число " + number + " содержит " + evenDigits + " четных и " + unevenDigits + " нечетных.");
+        result = new int[2];
+
+        result[0] = evenDigits;
+        result[1] = unevenDigits;
+
+        return result;
+
     }
 
     //1.5.4. Ряд Фибоначчи
@@ -106,18 +114,19 @@ public class Task_1_5 {
      * Выводит на экран ряд Фибоначчи
      *
      * @param bound верхняя граница ряда Фибоначчи
+     * @return - массив int с числами
      */
-    public static void fib(int bound) {
+    public static int[] fib(int bound) {
 
-        int[] fibArray = new int[bound];  // массив для результатов вычисления числа Фибоначчи
+        int[] fibArray = new int[bound + 1];  // массив для результатов вычисления числа Фибоначчи
         fibArray[1] = 1;
 
-        for (int i = 2; i < bound; i++) {
+        for (int i = 2; i < bound + 1; i++) {
 
             fibArray[i] = fibArray[i - 2] + fibArray[i - 1];
         }
 
-        System.out.println(Arrays.toString(fibArray));
+        return fibArray;
     }
 
     //1.5.5. Вывести ряд чисел в диапазоне с шагом
@@ -129,7 +138,7 @@ public class Task_1_5 {
      * @param maxRange верхняя граница диапазона
      * @param step     шаг
      */
-    public static void printRangeOfNumbersWithStep(int minRange, int maxRange, int step) {
+    public static int [] printRangeOfNumbersWithStep(int minRange, int maxRange, int step) {
 
         int[] arrayOfResult = new int[(maxRange - minRange) / step + 1];
 
@@ -140,12 +149,12 @@ public class Task_1_5 {
             arrayOfResult[i] = arrayOfResult[i - 1] + step;
         }
 
-        System.out.println(Arrays.toString(arrayOfResult));
+       return arrayOfResult;
 
     }
 
     //1.5.6. Переворот числа
-    public static void numberReversal(String number) {
+    public static String numberReversal(String number) {
 
         StringBuilder builder = new StringBuilder();
 
@@ -154,7 +163,7 @@ public class Task_1_5 {
             builder.append(number.charAt(i));
         }
 
-        System.out.println(builder.toString());
+        return builder.toString();
 
     }
 

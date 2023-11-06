@@ -10,42 +10,46 @@ package home_work_1;
 
 public class Task_7 {
 
+    private static final int VALID_LENGTH = 10;
+
     public static void main(String[] args) {
 
         int[] arrayOfNumbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-        int validLength = 10;
 
-        if (isValid(arrayOfNumbers, validLength)) {
-            System.out.println(createPhoneNumber(arrayOfNumbers));
+        String answer = createPhoneNumber(arrayOfNumbers);
 
-        } else System.out.println("Неверная длинна массива");
+        System.out.println(answer != null ? answer : "Неверная длинна массива");
 
     }
 
-    private static boolean isValid(int[] arrayOfNumbers, int lengthOfArray) {
+    private static boolean isValid(int[] arrayOfNumbers) {
 
-        return arrayOfNumbers.length == lengthOfArray;
+        return arrayOfNumbers.length == VALID_LENGTH;
     }
 
-    private static String createPhoneNumber(int[] arrayOfNumbers) {
+    public static String createPhoneNumber(int[] arrayOfNumbers) {
 
-        StringBuilder builder = new StringBuilder();
-        builder.append("(");
+        if (isValid(arrayOfNumbers)) {
 
-        for (int i = 0; i < arrayOfNumbers.length; i++) {
+            StringBuilder builder = new StringBuilder();
+            builder.append("(");
 
-            if (i == 3) {
+            for (int i = 0; i < arrayOfNumbers.length; i++) {
 
-                builder.append(") ");
-                builder.append(arrayOfNumbers[i]);
+                if (i == 3) {
 
-            } else if (i == 6) {
+                    builder.append(") ");
+                    builder.append(arrayOfNumbers[i]);
 
-                builder.append("-");
-                builder.append(arrayOfNumbers[i]);
+                } else if (i == 6) {
 
-            } else builder.append(arrayOfNumbers[i]);
+                    builder.append("-");
+                    builder.append(arrayOfNumbers[i]);
+
+                } else builder.append(arrayOfNumbers[i]);
+            }
+            return builder.toString();
         }
-        return builder.toString();
+        return null;
     }
 }

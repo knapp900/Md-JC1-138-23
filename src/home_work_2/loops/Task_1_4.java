@@ -60,7 +60,7 @@ public class Task_1_4 {
      *                   false-если проверяем нижнюю границу long
      * @return true если переполнен false если нет
      */
-    private boolean isOverflow(long number, boolean isPositive) {
+    public boolean isOverflow(long number, boolean isPositive) {
 
         if (!isPositive) {
 

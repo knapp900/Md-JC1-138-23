@@ -44,7 +44,7 @@ public class Task_1_2 {
      * @param number строка которую нужно перевести в массив
      * @return массив с результатом
      */
-    private int[] stringToIntArray(String number) {
+    public int[] stringToIntArray(String number) {
 
         int[] arrayOfDigitv = new int[number.length()];
 
@@ -61,11 +61,11 @@ public class Task_1_2 {
      * @param number массив чисел
      * @return long с результатом
      */
-    private long multiplyingDigitsOfNumber(int[] number) {
+    public long multiplyingDigitsOfNumber(int[] number) {
 
         long result = 1;
 
-        for (int i = 1; i <= number.length-1; i++) {
+        for (int i = 0; i <= number.length-1; i++) {
 
             result *= number[i];
 
@@ -80,10 +80,10 @@ public class Task_1_2 {
      * @param args = строка для проверки на число
      * @return true если строка содержит число и не начинается с нуля
      */
-    private boolean isNumber(String args) {
+    public boolean isNumber(String args) {
 
         return args.matches
-                ("^[0-9]+$") // Проверяет что в строке только число
+                ("^-?[0-9]+$") // Проверяет что в строке только число
                 || args.matches("^([0-9]+\\.[0-9]+)$") // Проверяет что в строке только число с точкой
                 && args.charAt(0) != '0'; // Проверяет что в строка не начинается с нуля
 
@@ -95,7 +95,7 @@ public class Task_1_2 {
      * @param args строка содержащая число для проверки
      * @return true если число с плавающей точкой и false если без
      */
-    private boolean isFlout(String args) {
+    public boolean isFlout(String args) {
 
         return  args.matches("^([0-9]+\\.[0-9]+)$");
     }
@@ -106,7 +106,7 @@ public class Task_1_2 {
      *
      * @param message = строка которая должна быть напечатана в консоль
      */
-    private void printMessage(String message) {
+    public void printMessage(String message) {
 
         System.out.println(message);
     }
@@ -117,7 +117,7 @@ public class Task_1_2 {
      * @param arrayOfDigit   результат вычисления факториала
      * @param result число из которого вычисляли факториал
      */
-    private String buildAnswer(int[] arrayOfDigit, long result) {
+    public String buildAnswer(int[] arrayOfDigit, long result) {
 
         StringBuilder builder = new StringBuilder();
 

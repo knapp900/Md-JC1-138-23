@@ -39,7 +39,7 @@ public class SortsUtils {
                 }
             }
         }
-        System.out.print(Arrays.toString(arr));
+
     }
 
     /**
@@ -48,6 +48,7 @@ public class SortsUtils {
      * @param arr int[] для сортировки
      */
     public static void shake(int[] arr) {
+
         int left = 0;
         int right = arr.length - 1;
 
@@ -80,7 +81,6 @@ public class SortsUtils {
             left++;
         }
 
-        System.out.print(Arrays.toString(arr));
     }
     
 }

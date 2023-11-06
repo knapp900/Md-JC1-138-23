@@ -20,37 +20,35 @@ public class Task_1 {
 
         int firstDigit;
         int secondDigit;
+        String resultOR;
+        String resultAND;
+
         System.out.print("Введите первое число: ");
         firstDigit = scanner.nextInt();
         System.out.print("Введите второе число: ");
         secondDigit = scanner.nextInt();
+
+        resultAND = "Результат & " + bitwiseOperatorAnd(firstDigit, secondDigit);
+        resultOR = "Результат | " + bitwiseOperatorOr(firstDigit, secondDigit);
         System.out.println(
                 "Вы ввели: " + '\n' + firstDigit + " двоичном представлении " + Integer.toBinaryString(firstDigit) +
-                        '\n' + secondDigit + " двоичном представлении " + Integer.toBinaryString(secondDigit));
+                        '\n' + secondDigit + " двоичном представлении " + Integer.toBinaryString(secondDigit) + '\n' +
+         resultAND + '\n' + resultOR);
 
-        bitwiseOperations(firstDigit, secondDigit);
         scanner.close();
     }
 
-    public static void bitwiseOperations(int one, int two) { // Число one 12 (1100), число two 13 (1101)
+    public static String bitwiseOperatorAnd(int one, int two) { // Число one 12 (1100), число two 13 (1101)
 
-        /*
-            1100
-            1101
-            ----
-            1100 В младшем бите (справа) нет полного совпадения разрядов так что результат выполнения И 0
-         */
         int and = one & two;
-        System.out.println("Результат выполнения побитового И :" + Integer.toBinaryString(and));
+        return Integer.toBinaryString(and);
 
-        /*
-            1100
-            1101
-            ----
-            1100 В младшем бите (справа) есть один положительный разряд так что результат выполнения ИЛИ 1
-         */
+    }
+
+    public static String bitwiseOperatorOr(int one, int two) {
+
         int or = one | two;
-        System.out.println("Результат выполнения побитового ИЛИ :" + Integer.toBinaryString(or));
+        return Integer.toBinaryString(or);
 
     }
 

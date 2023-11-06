@@ -27,13 +27,17 @@ public class CalculatorWithMathCopy implements ICalculator {
         return numOne * numTwo;
     }
 
-    public double divide(double numOne, int numTwo) {
-        return numOne / numTwo;
-    }
+    public double divide(double numOne, int numTwo) {return numOne / numTwo;}
 
     public double power(double numOne, double numTwo) { return Math.pow(numOne, numTwo); }
 
     public double abs(double num) { return Math.abs(num); }
 
-    public double sqrt(double num) { return Math.sqrt(num); }
+    public double sqrt(double num) {
+
+        if (num <= 0) {
+            return 0;
+        }
+
+        return Math.sqrt(num); }
 }

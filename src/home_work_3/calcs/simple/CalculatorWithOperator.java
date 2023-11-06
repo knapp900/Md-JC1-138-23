@@ -70,12 +70,17 @@ public class CalculatorWithOperator implements ICalculator {
      * @return - результат
      */
     public double power(double numOne, double numTwo) {
+
+        if (numOne == 0 && numTwo == 0) {
+            return 1;
+        }
         if (numOne == 1 || numOne == 0) return numOne;
         if (numTwo > 1) return numOne * power(numOne, --numTwo);
         if (numTwo < 1) return 1 / numTwo * power(numOne, ++numTwo);
         return numOne;
 
     }
+
 
     /**
      * Возвращает модуль аргумента
@@ -95,7 +100,7 @@ public class CalculatorWithOperator implements ICalculator {
      */
     public double sqrt(double num) {
         if (num <= 0) {
-            return num;
+            return 0;
         }
         // Инициализируем начальное приближение
         double guess = num / 2;

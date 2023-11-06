@@ -16,8 +16,12 @@ public class Task_5 {
         boolean weekday = true; // false означает не рабочий день
         boolean vocation = false; // false означает что мы не в отпуске
 
-        System.out.println(sleepIn(weekday, vocation) ? "Можно спать дальше!" : "Бегом на работу!");
+        System.out.println(printAnswer(weekday, vocation));
 
+    }
+
+    public static String printAnswer(boolean weekday,boolean vocation){
+        return sleepIn(weekday, vocation) ? "Можно спать дальше!" : "Пора идти на работу!";
     }
 
     /*
@@ -28,7 +32,7 @@ public class Task_5 {
     true || false == true
     false || true == true
      */
-    private static boolean sleepIn(boolean weekday, boolean vacation) {
+    public static boolean sleepIn(boolean weekday, boolean vacation) {
 
         return vacation || !weekday;
     }

@@ -51,14 +51,14 @@ public class Task_1_3 {
      * @param args = строка для проверки на число
      * @return true если строка содержит число и не начинается с нуля
      */
-    private boolean isNumber(String args) {
+    public boolean isNumber(String args) {
 
         if (args == null) {
 
             return false;
         }
 
-        return args.matches("^[0-9]+\\s[0-9]+$") && args.charAt(0) != '0';
+        return args.matches("^-?[0-9]+\\s-?[0-9]+$") && args.charAt(0) != '0';
     }
 
     /**
@@ -68,7 +68,7 @@ public class Task_1_3 {
      * @param power  степень
      * @return double результат
      */
-    private double customPow(double number, int power) {
+    public double customPow(double number, int power) {
 
         double result = 1;
 
@@ -86,7 +86,7 @@ public class Task_1_3 {
      * @param stringOfNumber String содержащий числа
      * @return int[] результат преобразования строки
      */
-    private int[] stringToIntArray(String stringOfNumber) {
+    public int[] stringToIntArray(String stringOfNumber) {
 
         String[] response = stringOfNumber.split("\\s");
 
@@ -104,7 +104,7 @@ public class Task_1_3 {
      * @param num int число для проверки
      * @return true если число больше нуля
      */
-    private boolean powerNumberValidation(int num) {
+    public boolean powerNumberValidation(int num) {
 
         return num > 0;
     }
