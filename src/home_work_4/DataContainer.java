@@ -166,6 +166,7 @@ public class DataContainer<T> implements Iterable<T> {
 
         if (!this.isEmpty()) {
 
+            trimNulls();
             return data;
         }
         return null;
@@ -179,7 +180,7 @@ public class DataContainer<T> implements Iterable<T> {
      */
     public boolean delete(int index) {
 
-        if (index < data.length && index > 0) {
+        if (index < data.length && index >= 0) {
 
             data[index] = null;
             modCounter--;
