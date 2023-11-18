@@ -90,5 +90,40 @@ public class App {
         Set<Person> treeSetPersons = new TreeSet<>();
         operations.doOperations(person,treeSetPersons,1_000_000);
 
+        /*
+        Операция: Заполнение коллекции Animal java.util.LinkedList. Заняла 204 мс
+        Операция: Итерирование коллекции (iterator) java.util.LinkedList. Заняла 15 мс
+        Операция: Итерирование коллекции (не foreach) java.util.LinkedList. Заняла 21 мс
+        Операция: Удаление всех элементов коллекции java.util.LinkedList. Заняла 63 мс
+        Операция: Заполнение коллекции Animal java.util.ArrayList. Заняла 89 мс
+        Операция: Итерирование коллекции (iterator) java.util.ArrayList. Заняла 8 мс
+        Операция: Итерирование коллекции (не foreach) java.util.ArrayList. Заняла 4 мс
+        Операция: Удаление всех элементов коллекции java.util.ArrayList. Заняла 75488 мс
+        Операция: Заполнение коллекции Animal java.util.HashSet. Заняла 110 мс
+        Операция: Итерирование коллекции (iterator) java.util.HashSet. Заняла 0 мс
+        Операция: Итерирование коллекции (не foreach) java.util.HashSet. Заняла 0 мс
+        Операция: Удаление всех элементов коллекции java.util.HashSet. Заняла 0 мс
+        Операция: Заполнение коллекции Animal java.util.TreeSet. Заняла 51 мс
+        Операция: Итерирование коллекции (iterator) java.util.TreeSet. Заняла 0 мс
+        Операция: Итерирование коллекции (не foreach) java.util.TreeSet. Заняла 0 мс
+        Операция: Удаление всех элементов коллекции java.util.TreeSet. Заняла 0 мс
+        Операция: Заполнение коллекции Person java.util.LinkedList. Заняла 2083 мс
+        Операция: Итерирование коллекции (iterator) java.util.LinkedList. Заняла 49 мс
+        Операция: Итерирование коллекции (не foreach) java.util.LinkedList. Заняла 50 мс
+        Операция: Удаление всех элементов коллекции java.util.LinkedList. Заняла 93 мс
+        Операция: Заполнение коллекции Person java.util.ArrayList. Заняла 1617 мс
+        Операция: Итерирование коллекции (iterator) java.util.ArrayList. Заняла 8 мс
+        Операция: Итерирование коллекции (не foreach) java.util.ArrayList. Заняла 1 мс
+        Операция: Удаление всех элементов коллекции java.util.ArrayList. Заняла 68702 мс
+        Операция: Заполнение коллекции Person java.util.HashSet. Заняла 2092 мс
+        Операция: Итерирование коллекции (iterator) java.util.HashSet. Заняла 67 мс
+        Операция: Итерирование коллекции (не foreach) java.util.HashSet. Заняла 50 мс
+        Операция: Удаление всех элементов коллекции java.util.HashSet. Заняла 223 мс
+        Операция: Заполнение коллекции Person java.util.TreeSet. Заняла 2966 мс
+        Операция: Итерирование коллекции (iterator) java.util.TreeSet. Заняла 53 мс
+        Операция: Итерирование коллекции (не foreach) java.util.TreeSet. Заняла 122 мс
+        Операция: Удаление всех элементов коллекции java.util.TreeSet. Заняла 232 мс
+         */
+
     }
 }
