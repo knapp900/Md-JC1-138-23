@@ -16,6 +16,11 @@ public class GenerateRandomName {
 
     private static List<String> listNamesFromFile;
 
+    /**
+     * Генерирует строку из латинских символов
+     *
+     * @return - результат
+     */
     public static String generateRandomName() {
 
         builder = new StringBuilder();
@@ -31,6 +36,11 @@ public class GenerateRandomName {
 
     }
 
+    /**
+     * Генерирует строку из русских символов
+     *
+     * @return - результат
+     */
     public static String generateRussianName() {
 
         builder = new StringBuilder();
@@ -46,11 +56,21 @@ public class GenerateRandomName {
 
     }
 
+    /**
+     * Генерирует строку из реальных имен
+     *
+     * @return - результат
+     */
     public static String generateRealName() {
 
         return REAL_NAMES[random.nextInt(REAL_NAMES.length)];
     }
 
+    /**
+     * Генерирует строку из реальных имен прочитанных из файла
+     *
+     * @return - результат
+     */
     public static String generateNameFromFile(String fileName) throws IOException {
 
         listNamesFromFile = new ArrayList<>();

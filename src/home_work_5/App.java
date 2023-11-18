@@ -1,9 +1,9 @@
 package home_work_5;
 
 import home_work_5.DTO.Animal;
+import home_work_5.DTO.Person;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /*
 Коллекции, полиморфизм, DTO, Supplier*, Comparator:
@@ -65,29 +65,30 @@ public class App {
 
     public static void main(String[] args) {
 
-        List<Animal> animals = new ArrayList<>();
+        Operations operations = new OperationWithCollectionsImpl();
 
-//        Animal animal1 = new Animal(1,"Ярик");
-//        Animal animal2 = new Animal(10,"Арик");
-//        Animal animal3 = new Animal(10,"Брик");
-//        Animal animal4 = new Animal(10,"Варик");
-//
-//        animals.add(animal3);
-//        animals.add(animal2);
-//        animals.add(animal4);
-//        animals.add(animal1);
-//
-//        System.out.println(animals);
-//
-//        Collections.sort(animals,new CompareAgeAndNickForAnimals());
-//
-//        System.out.println(animals);
-//
-//        Collections.sort(animals,new CompareAgeForAnimals());
-//
-//        System.out.println(animals);
+        Animal animal = new Animal();
+
+        List<Animal> linkedAnimals = new LinkedList<>();
+        operations.doOperations(animal,linkedAnimals,1_000_000);
+        List<Animal> arrayAnimals = new ArrayList<>();
+        operations.doOperations(animal,arrayAnimals,1_000_000);
+        Set<Animal> hashSetAnimals = new HashSet<>();
+        operations.doOperations(animal,hashSetAnimals,1_000_000);
+        Set<Animal> treeSetAnimals = new TreeSet<>();
+        operations.doOperations(animal,treeSetAnimals,1_000_000);
 
 
+        Person person = new Person();
+
+        List<Person> linkedPersons = new LinkedList<>();
+        operations.doOperations(person,linkedPersons,1_000_000);
+        List<Person> arrayPersons = new ArrayList<>();
+        operations.doOperations(person,arrayPersons,1_000_000);
+        Set<Person> hashSetPersons = new HashSet<>();
+        operations.doOperations(person,hashSetPersons,1_000_000);
+        Set<Person> treeSetPersons = new TreeSet<>();
+        operations.doOperations(person,treeSetPersons,1_000_000);
 
     }
 }

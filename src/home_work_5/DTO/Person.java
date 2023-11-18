@@ -11,11 +11,13 @@ import java.util.Objects;
 		1.1.2. Строку password - пароль (от 5 до 10 символов)
 		1.1.3. Строку name - имя пользователя
  */
-public class Person {
+public class Person implements Comparable<Person> {
 
     private String nick;
     private String password;
     private String name;
+
+    public Person(){}
 
     public Person(String nick, String password, String name) throws IllegalArgumentException {
         this.nick = nick;
@@ -72,5 +74,10 @@ public class Person {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.name.compareTo(o.name);
     }
 }

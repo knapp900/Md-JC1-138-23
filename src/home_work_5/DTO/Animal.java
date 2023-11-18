@@ -9,7 +9,7 @@ import java.util.Objects;
 		1.2.1. Число age - возраст (от 1 до 15 лет)
 		1.2.2. Строка nick - кличка
  */
-public class Animal  {
+public class Animal implements Comparable<Animal>  {
 
     private int age;
     private String nick;
@@ -63,4 +63,8 @@ public class Animal  {
                 '}';
     }
 
+    @Override
+    public int compareTo(Animal o) {
+        return this.nick.compareTo(o.nick);
+    }
 }
