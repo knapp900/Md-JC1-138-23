@@ -27,8 +27,8 @@ public class MultiThreadedSearchApp {
     private static final String RESULT_PATH = "result.txt";
 
     public static void main(String[] args) {
-        MultiThreadedSearchApp mApp = new MultiThreadedSearchApp();
         ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        MultiThreadedSearchApp mApp = new MultiThreadedSearchApp();
         ISearchEngine searchEngine = new EasySearch();
         String folderPath;
         File folder;
@@ -61,29 +61,32 @@ public class MultiThreadedSearchApp {
 
     }
 
+
     /**
      * Проводит поиск слова в указанной директории в .txt файлах и печатает результат в файл.
      *
-     * @param executorService
-     * @param searchEngine
-     * @param folderPath
-     * @param searchWord
+     * @param executorService - экземпляр executorService
+     * @param searchEngine    - экземпляр класса реализующий ISearchEngine
+     * @param folderPath      - путь к папке
+     * @param searchWord      - слово для поиска
      */
     private void executeMultiThreadedSearch(ExecutorService executorService, ISearchEngine searchEngine, String folderPath, String searchWord) {
 
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(folderPath), "*.txt")) {
 
             for (Path path : stream) {
-
-                executorService.execute(() -> {
-                    String content = new GetRawTextFromTXTFileToString(path.toString()).get();
-                    long count = searchEngine.search(content, searchWord);
-                    writeResultToFile(path.getFileName().toString(), searchWord, count, Thread.currentThread().getName());
-                });
+                // Передаем Runnable() в executorService в виде лямбды
+                executorService.execute(
+                        () -> {
+                            String content = new GetRawTextFromTXTFileToString(path.toString()).get();
+                            long count = searchEngine.search(content, searchWord);
+                            writeResultToFile(path.getFileName().toString(), searchWord, count, Thread.currentThread().getName());
+                        }
+                );
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.print(e + "Ошибка в методе executeMultiThreadedSearch()");
         }
     }
 
@@ -93,7 +96,6 @@ public class MultiThreadedSearchApp {
      * @param fileName   - имя файла
      * @param searchWord - слово которое для поиска
      * @param count      - количество найденых в тексте слов
-     * @throws IOException
      */
     private void writeResultToFile(String fileName, String searchWord, long count, String threadName) {
 
@@ -112,7 +114,7 @@ public class MultiThreadedSearchApp {
             writer.write(builder.toString());
             writer.flush();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.print(e + "Не удалось записать поисковой запрос в файл: " + RESULT_PATH);
         }
 
 
@@ -121,7 +123,7 @@ public class MultiThreadedSearchApp {
     /**
      * Получает строку
      *
-     * @return
+     * @return - строку из консоли
      */
     private String getStringInput() {
         Scanner scanner = new Scanner(System.in);
